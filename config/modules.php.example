@@ -1,0 +1,8 @@
+<?php
+return [
+    "core" => [
+        "name" => "Core",
+        "version" => "0.0.1",
+        "priority" => 1
+    ]
+];

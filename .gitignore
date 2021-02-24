@@ -1,0 +1,11 @@
+.DS_Store
+/.idea
+/vendor
+/var
+/database
+/config/*.php
+/.env
+/www/adminer.php
+/www/info.php
+/.docker
+/docker-compose.yml

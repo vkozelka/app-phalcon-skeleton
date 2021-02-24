@@ -1,0 +1,58 @@
+<?php
+return [
+    // Legend
+    // full - full with module,controller,action,params
+    // nop - full without params
+    // noa - full without params and action
+    // noc - full without params, action and controller
+    // nom - only section, others default
+
+    // Admin = section
+    'admin_full' => [
+        'route'=> '/admin/:module/:controller/:action/:params[/]?',
+        'paths' => ['module' => 1, 'controller' => 2, 'action' => 3, 'params' => 4, 'section' => 'admin']
+    ],
+    'admin_nop' => [
+        'route'=> '/admin/:module/:controller/:action[/]?',
+        'paths' => ['module' => 1, 'controller' => 2, 'action' => 3, 'params' => null, 'section' => 'admin']
+    ],
+    'admin_noa' => [
+        'route'=> '/admin/:module/:controller[/]?',
+        'paths' => ['module' => 1, 'controller' => 2, 'action' => 'index', 'params' => null, 'section' => 'admin']
+    ],
+    'admin_noc' => [
+        'route'=> '/admin/:module[/]?',
+        'paths' => ['module' => 1, 'controller' => 'index', 'action' => 'index', 'params' => null, 'section' => 'admin']
+    ],
+    'admin_nom' => [
+        'route'=> '/admin[/]?',
+        'paths' => ['module' => 'core', 'controller' => 'index', 'action' => 'index', 'params' => null, 'section' => 'admin']
+    ],
+
+    // Default = section
+    'default_full' => [
+        'route'=> '/:module/:controller/:action/:params[/]?',
+        'paths' => ['module' => 1, 'controller' => 2, 'action' => 3, 'params' => 4, 'section' => 'frontend']
+    ],
+    'default_nop' => [
+        'route'=> '/:module/:controller/:action[/]?',
+        'paths' => ['module' => 1, 'controller' => 2, 'action' => 3, 'params' => null, 'section' => 'frontend']
+    ],
+    'default_noa' => [
+        'route'=> '/:module/:controller[/]?',
+        'paths' => ['module' => 1, 'controller' => 2, 'action' => 'index', 'params' => null, 'section' => 'frontend']
+    ],
+    'default_noc' => [
+        'route'=> '/:module[/]?',
+        'paths' => ['module' => 1, 'controller' => 'index', 'action' => 'index', 'params' => null, 'section' => 'frontend']
+    ],
+    'default_nom' => [
+        'route'=> '[/]?',
+        'paths' => ['module' => 'core', 'controller' => 'index', 'action' => 'index', 'params' => null, 'section' => 'frontend']
+    ],
+
+    // Special route for Phalcon\Router::notFound
+    'notFound' => [
+        'paths' => ['module' => 'core', 'controller' => 'error', 'action' => 'error404', 'params' => null, 'section' => 'frontend']
+    ]
+];

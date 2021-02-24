@@ -1,0 +1,23 @@
+{
+    "require": {
+        "ext-pdo": "*",
+        "ext-json":  "*",
+        "ext-phalcon": "*",
+        "php": ">=7.4",
+        "swiftmailer/swiftmailer": "^v6.2.5",
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Module\\":  "./app/modules",
+            "App\\System\\":  "./app/system",
+            "App\\Core\\":  "./app/core"
+        }
+    },
+    "require-dev": {
+        "phpmetrics/phpmetrics": "^v2.7.4"
+    },
+    "scripts": {
+        "metrics": "phpmetrics --report-html=./www/metrics ./app"
+    }
+}

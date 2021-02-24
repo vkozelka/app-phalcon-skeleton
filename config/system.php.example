@@ -1,0 +1,11 @@
+<?php
+return [
+    'development' => [
+        'base_url' => 'http://localhost/my-project',
+        'base_path' => '/my-project',
+    ],
+    'production' => [
+        'base_url' => 'https://production-site.com',
+        'base_path' => '',
+    ]
+];

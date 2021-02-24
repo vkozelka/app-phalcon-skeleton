@@ -1,0 +1,17 @@
+<?php
+return [
+    'development' => [
+        'host' => 'db',
+        'username' => '',
+        'password' => '',
+        'dbname' => '',
+        'port' => '3306',
+    ],
+    'production' => [
+        'host' => 'db',
+        'username' => '',
+        'password' => '',
+        'dbname' => '',
+        'port' => '3306',
+    ]
+];
