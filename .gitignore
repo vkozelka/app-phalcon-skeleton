@@ -1,11 +1,12 @@
 .DS_Store
-/.idea
+.idea
 /vendor
 /var
 /database
 /config/*.php
-/.env
+.env
 /www/adminer.php
 /www/info.php
-/.docker
-/docker-compose.yml
+.docker
+docker-compose.yml
+composer.lock
